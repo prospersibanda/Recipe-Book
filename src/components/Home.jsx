@@ -7,7 +7,6 @@ const Home = () => {
   return (
     <>
       <div className="main">
-        <Navbar />
         <PopularSlider />
         <TredingSlider />
       </div>
