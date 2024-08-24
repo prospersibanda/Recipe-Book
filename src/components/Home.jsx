@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 import PopularSlider from './PopularSlider'
 import TredingSlider from './TredingSlider'
 
-const Home = () => {
+const Home = () => { 
   return (
     <>
       <div className="main">
