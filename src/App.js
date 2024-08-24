@@ -1,17 +1,29 @@
+// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import RecipeDetail from './components/RecipeDetail'; // Import the RecipeDetail component
-import Navbar from './components/Navbar'; // Import the Navbar component
+import TurkishRecipes from './components/TurkishRecipes';
+import AmericanRecipes from './components/AmericanRecipes';
+import IndianRecipes from './components/IndianRecipes';
+import NigerianRecipes from './components/NigerianRecipes';
+import ThaiRecipes from './components/ThaiRecipes';
+import SearchResults from './components/SearchResults';
+import RecipeDetail from './components/RecipeDetail';
 import './App.css';
+import Navbar from './components/Navbar';
 
 const App = () => {
   return (
     <Router>
-      <Navbar /> {/* Place Navbar here */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:id" element={<RecipeDetail />} /> {/* Route for RecipeDetail */}
+        <Route path="/category/American" element={<AmericanRecipes />} />
+        <Route path="/category/Indian" element={<IndianRecipes />} />
+        <Route path="/category/Nigerian" element={<NigerianRecipes />} />
+        <Route path="/category/Thai" element={<ThaiRecipes />} />
+        <Route path="/search/:query" element={<SearchResults />} />
+        <Route path="/:id" element={<RecipeDetail />} />
       </Routes>
     </Router>
   );

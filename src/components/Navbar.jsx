@@ -27,17 +27,11 @@ const Navbar = () => {
                     </form>
                 </div>
                 <div className="right">
-                    <Link to={`/category/South African`} className="link">
-                        <div>South African</div>
-                    </Link>
                     <Link to={`/category/american`} className="link">
                         <div>American</div>
                     </Link>
                     <Link to={`/category/Indian`} className="link" >
                         <div>Indian</div>
-                    </Link>
-                    <Link to={`/category/Nigerian`} className="link">
-                        <div>Nigerian</div>
                     </Link>
                     <Link to={`/category/thai`} className="link">
                         <div>Thai</div>
