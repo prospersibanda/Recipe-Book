@@ -1,9 +1,7 @@
 import React from 'react'
-import Navbar from './Navbar'
 import PopularSection from './popularSection'  // Renamed to reflect the new component
 import TrendingSlider from './TrendingSlider'
 import '../Styles/Home.css'  // Updated path for Home CSS
-import Footer from './Footer'
 import RecipeBook from './RecipeBook'
 
 const Home = () => { 
