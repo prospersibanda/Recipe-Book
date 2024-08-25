@@ -1,0 +1,30 @@
+.main {
+    padding: 2rem 1rem;
+    background-color: #f5f5f5;
+}
+
+.section {
+    margin-bottom: 3rem;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.section-description {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.popular-section {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
