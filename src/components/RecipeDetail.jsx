@@ -1,9 +1,9 @@
-// RecipeDetail.jsx
+// src/components/RecipeDetail.jsx
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import '../Styles/recipeDetail.css';
 import SimilarRecipesCarousel from './SimilarRecipesCarousel';
-
+import '../App.css'
 const RecipeDetail = () => {
   const { id } = useParams();
   const [recipe, setRecipe] = useState(null);
@@ -22,23 +22,22 @@ const RecipeDetail = () => {
 
   return (
     <div className="recipe-detail">
+      <div className="recipe-detail-header">
+        <h1 className="recipe-title">{recipe.strMeal}</h1>
+        <p className="recipe-meta">
+          <strong>Category:</strong> {recipe.strCategory} | <strong>Area:</strong> {recipe.strArea}
+        </p>
+      </div>
       <div className="recipe-detail-content">
         <div className="recipe-detail-img">
           <img src={recipe.strMealThumb} alt={recipe.strMeal} />
         </div>
         <div className="recipe-detail-text">
-          <h2>{recipe.strMeal}</h2>
-          <p><strong>Category:</strong> {recipe.strCategory}</p>
-          <p><strong>Area:</strong> {recipe.strArea}</p>
-        </div>
-      </div>
-      <div className="recipe-detail-info">
-        <div className="recipe-detail-description">
-          <h3>Instructions</h3>
+          <h2>Instructions</h2>
           <p>{recipe.strInstructions}</p>
         </div>
         <div className="recipe-detail-ingredients">
-          <h3>Ingredients</h3>
+          <h2>Ingredients</h2>
           <ul>
             {Object.keys(recipe)
               .filter(key => key.startsWith('strIngredient') && recipe[key])

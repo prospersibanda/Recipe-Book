@@ -1,7 +1,16 @@
 body {
-  background-color: #f9f9f9;
+  background-color: #f9f9f9 !important;
 }
 
+/* global stylesheet */
+:root {
+  --background-color: #f5f5f5;
+}
+
+/* component stylesheet */
+.recipe-detail {
+  background-color: var(--background-color);
+}
 .main {
   margin: 0;
   padding: 0;
@@ -11,14 +20,13 @@ body {
 
 .nav {
   background-color: #ffffff;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the navbar */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70px;
+  height: 60px;
   padding: 0 1rem;
-  flex-wrap: wrap; /* Allow wrapping to fit content */
-  border-bottom: 0.5px solid #333333;
+  border-bottom: 1px solid #e0e0e0; /* Lighter border for the bottom */
 }
 
 .left h2 {
@@ -32,16 +40,16 @@ body {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  margin: 0 0.5rem; /* Slightly reduced margin */
+  margin: 0 1rem;
 }
 
 .search input {
-  width: 100%; /* Ensure input scales with available space */
-  max-width: 250px; /* Further reduced max width */
-  height: 35px;
+  width: 100%;
+  max-width: 300px;
+  height: 36px;
   padding: 0 1rem;
   border-radius: 20px;
-  border: 1px solid #cccccc;
+  border: 1px solid #dddddd;
   font-size: 16px;
   color: #333333;
   background-color: #ffffff;
@@ -49,7 +57,7 @@ body {
 }
 
 .search input:focus {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   outline: none;
 }
 
@@ -57,22 +65,21 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 0.5rem; /* Further reduced gap between links */
-  flex-wrap: wrap; /* Ensure wrapping for links */
+  gap: 0.5rem;
 }
 
 .right div {
-  padding: 0.5rem 0.8rem; /* Reduced padding */
-  font-size: 0.9rem; /* Slightly reduced font size */
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   color: #555555;
   transition: color 0.3s ease, background-color 0.3s ease;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .right div:hover {
   color: #ffffff;
-  background-color: #0066cc;
+  background-color: #007bff;
 }
 
 .link {
@@ -81,28 +88,28 @@ body {
 
 .slider img, .slider2 img, .img img {
   border-radius: 10px;
-  border: 2px solid #cccccc;
+  border: 1px solid #e0e0e0;
   transition: transform 0.3s ease, border 0.3s ease;
 }
 
 .slider img:hover, .slider2 img:hover, .img img:hover {
-  transform: translateZ(100px);
-  border: 2px solid #0066cc;
+  transform: scale(1.05);
+  border: 1px solid #007bff;
 }
 
 .btn {
   padding: 1rem;
   font-size: 1rem;
   font-weight: bold;
-  background-color: #0066cc;
+  background-color: #007bff;
   color: #ffffff;
   border-radius: 10px;
   margin: 2rem;
-  border: 2px solid #004a99;
+  border: 2px solid #0056b3;
   transition: background-color 0.3s ease, border 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #004a99;
-  border: 2px solid #003366;
+  background-color: #0056b3;
+  border: 2px solid #003d7a;
 }

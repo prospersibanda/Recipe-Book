@@ -2,7 +2,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import TurkishRecipes from './components/TurkishRecipes';
 import AmericanRecipes from './components/AmericanRecipes';
 import IndianRecipes from './components/IndianRecipes';
 import NigerianRecipes from './components/NigerianRecipes';
@@ -11,6 +10,7 @@ import SearchResults from './components/SearchResults';
 import RecipeDetail from './components/RecipeDetail';
 import './App.css';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -25,6 +25,7 @@ const App = () => {
         <Route path="/search/:query" element={<SearchResults />} />
         <Route path="/:id" element={<RecipeDetail />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 };

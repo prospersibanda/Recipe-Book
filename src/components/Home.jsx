@@ -4,6 +4,7 @@ import PopularSection from './popularSection'  // Renamed to reflect the new com
 import TrendingSlider from './TrendingSlider'
 import '../Styles/Home.css'  // Updated path for Home CSS
 import Footer from './Footer'
+import RecipeBook from './RecipeBook'
 
 const Home = () => { 
   return (
@@ -20,7 +21,7 @@ const Home = () => {
           <TrendingSlider />
         </section>
         <section>
-          <Footer />
+          <RecipeBook />
         </section>
       </div>
     </>
