@@ -48,7 +48,6 @@ const RecipeDetail = () => {
         </div>
       </div>
       <div className="similar-recipes">
-        <h2>Similar Recipes</h2>
         <SimilarRecipesCarousel />
       </div>
     </div>

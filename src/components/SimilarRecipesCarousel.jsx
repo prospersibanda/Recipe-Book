@@ -1,10 +1,9 @@
-// SimilarRecipesCarousel.jsx
 import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
-import '../Styles/recipeDetail.css'; // Include the same CSS file for styling
+import '../Styles/similarRecipesCarousel.css'; // Add this file for custom styles
 
 const SimilarRecipesCarousel = () => {
   const [recipes, setRecipes] = useState([]);
@@ -26,16 +25,21 @@ const SimilarRecipesCarousel = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
+    arrows: false, // Hide default arrows
+    dots: true,    // Add dots for navigation
   };
 
   return (
     <div className="carousel-container">
+      <h2 className="carousel-title">Similar Recipes</h2>
       <Slider {...settings}>
         {recipes.map((recipe) => (
           <Link to={`/${recipe.idMeal}`} key={recipe.idMeal} className="carousel-item">
             <div className="carousel-img">
               <img src={recipe.strMealThumb} alt={recipe.strMeal} />
-              <p>{recipe.strMeal}</p>
+              <div className="carousel-info">
+                <p>{recipe.strMeal}</p>
+              </div>
             </div>
           </Link>
         ))}
